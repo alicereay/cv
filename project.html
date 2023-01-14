@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monkey Tennis</title>
+  </head>
+  <link href="https://fonts.googleapis.com/css?family=Jost" rel="stylesheet" />
+  <style>
+    body {
+      display: block;
+
+      text-align: center;
+      font-family: "Jost";
+      background: #312c28;
+      color: #dddad5;
+    }
+    .pianoGuitar {
+      border-radius: 100px;
+      border-style: groove;
+    }
+    a {
+      text-decoration: double;
+      color: #9f354e;
+      transition: all 200ms ease-in-out;
+    }
+    ul {
+      margin: 5px;
+    }
+    .youtubeLinks:hover {
+      font-size: 24px;
+    }
+    img {
+      border-radius: 9px;
+      transition: all 200ms ease-in-out;
+    }
+    .socialLogo:hover {
+      width: 30px;
+    }
+    .listLogo {
+      display: inline;
+    }
+
+    ul {
+      font-size: 16px;
+      list-style: none;
+      font-weight: bold;
+      font-variant: small-caps;
+      padding: 0px;
+    }
+    h1 {
+      font-size: 40px;
+      margin: 5px 2px 5px;
+    }
+    h2 {
+      line-height: 15px;
+      color: #dddad5;
+      font-size: 12px;
+      margin: 5px 20px 5px;
+      text-align: center;
+      padding: 10px;
+    }
+    h3 {
+      font-size: 14px;
+      margin: 5px;
+    }
+    button {
+      font-family: jost;
+      background: linear-gradient(#312c28, #19090e);
+      color: #dddad5;
+      display: block;
+      font-size: 15px;
+      padding: 10px;
+      margin: 20px auto;
+      border: 2px solid #dddad5;
+      border-radius: 7px;
+      transition: all 200ms ease-in-out;
+    }
+    button:hover {
+      background: #dddad5;
+      color: #312c28;
+      font-size: 17px;
+    }
+    h4 {
+      font-size: 12px;
+    }
+  </style>
+  <body>
+    <h1>MONKEY TENNIS</h1>
+    <img
+      class="pianoGuitar"
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/575/original/Piano_and_guitar.jpg?1672948444"
+      width=" 200px"
+    />
+    <h2>
+      <strong> Monkey Tennis</strong> are a live band based on the Costa del
+      Sol, Spain. Comprising of piano, keyboards, vocals, guitar, bass and
+      drums. Also adding live brass when required. We cover a wide variety of
+      music as a trio, four piece, five piece or six piece band. Available for
+      all kinds of public, private or corporate events.
+      <p>Listen here:</p>
+    </h2>
+    <ul class="videosList">
+      <li class="youtubeLinks">
+        <a href="https://www.youtube.com/watch?v=3DuEGovIz5A>" target="_blank"
+          >Let's Dance</a
+        >
+      </li>
+
+      <li class="youtubeLinks">
+        <a href="https://www.youtube.com/watch?v=3xLowE36mD0" target="_blank"
+          >I wish</a
+        >
+      </li>
+
+      <li class="youtubeLinks">
+        <a href="https://www.youtube.com/watch?v=XzPrg5FaFBk" target="_blank"
+          >Every Breath You Take</a
+        >
+      </li>
+    </ul>
+
+    <button class="contactButton">CONTACT US 🖋</button>
+
+    <h3>
+      mdick@hotmail.com <br /><span> @monkeytennisband</span>
+      <div>
+        <img src="
+        https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/563/original/MT_Logo_2020.jpg?1672946123
+        " width="50px alt="Monkey Tennis Logo" />
+      </div>
+    </h3>
+
+    <ul class="socials">
+      <li class="listLogo">
+        <a href="https://www.facebook.com/Monkeytennisband/" target="_blank">
+          <img
+            class="socialLogo"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/582/original/download.jpg?1672952838"
+            alt="facebook logo"
+            width="18px"
+          />
+        </a>
+      </li>
+      <li class="listLogo">
+        <a href="https://www.instagram.com/monkeytennisband/" target="_blank">
+          <img
+            class="socialLogo"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/584/original/download_%282%29.jpg?1672952856"
+            alt="instagram logo"
+            width="18px"
+          />
+        </a>
+      </li>
+      <li class="listLogo">
+        <a href="https://www.youtube.com/@monkeytennisband" target="_blank">
+          <img class="socialLogo"
+          src=https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/591/original/youtube.jpg?1672954993"
+          alt="youtube logo" width="18px"
+        </a>
+      </li>
+    </ul>
+    <script>
+      function contact() {
+        let name = prompt("What's your name?");
+        let email = prompt("What's your email address?");
+        let date = prompt("What year is your event?");
+
+        if (date < 2022) {
+          alert(
+            `Sorry, ${name}, Monkey Tennis are unable to time travel. Try again!`
+          );
+        } else {
+          let h3 = document.querySelector("h3");
+          h3.innerHTML = `Thank you, ${name}, your message has been sent to Monkey Tennis. You'll receive a response to ${email} in the next 48 hours.`;
+        }
+      }
+
+      let contactButton = document.querySelector(".contactButton");
+      contactButton.addEventListener("click", contact);
+    </script>
+    <hr />
+    <h4><em>Page built by Alice Reay</em></h4>
+  </body>
+</html>
